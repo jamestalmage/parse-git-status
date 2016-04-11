@@ -1,6 +1,6 @@
 {
   "name": "parse-git-status",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Parse the output of `git status --porcelain -z`",
   "license": "MIT",
   "repository": "jamestalmage/parse-git-status",
