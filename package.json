@@ -1,0 +1,32 @@
+{
+  "name": "parse-git-status",
+  "version": "0.0.0",
+  "description": "Parse the output of `git status --porcelain -z`",
+  "license": "MIT",
+  "repository": "jamestalmage/parse-git-status",
+  "author": {
+    "name": "James Talmage",
+    "email": "james@talmage.io",
+    "url": "github.com/jamestalmage"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "git",
+    "status",
+    "parse"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "ava": "^0.14.0",
+    "execa": "^0.2.2",
+    "xo": "^0.13.0"
+  }
+}
