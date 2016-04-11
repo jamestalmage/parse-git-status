@@ -41,14 +41,16 @@ test('parse', t => {
 	]);
 });
 
-test('practical example', async () => {
-	const {stdout} = await execa('git', ['status', '--porcelain', '-z']);
-	console.log(JSON.stringify(fn(stdout).map(
-		({x, y, to, from}) => ({
-			x: fn.describeCode(x),
-			y: fn.describeCode(y),
-			to,
-			from
-		})
-	), null, 4));
-});
+if (!/0\.10\./.test(process.version)) {
+	test('practical example', async () => {
+		const {stdout} = await execa('git', ['status', '--porcelain', '-z']);
+		console.log(JSON.stringify(fn(stdout).map(
+			({x, y, to, from}) => ({
+				x: fn.describeCode(x),
+				y: fn.describeCode(y),
+				to,
+				from
+			})
+		), null, 4));
+	});
+}
